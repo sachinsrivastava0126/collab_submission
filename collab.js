@@ -141,11 +141,11 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 })
-rl.question("Please enter filepaths to check for discrepencies:\n", function (answer) {
+rl.question("Please enter comma-separated (no spaces) filepaths to check for discrepencies:\n", function (answer) {
 	var sol = new Solution(answer.split(','))
 
 	rl.question("\nPlease specify a concern type (subscriber_count or channel_ownership) or just hit enter to continue:\n", function (response) {
-		console.log("Finding discrepencies between "+sol.files.join(", ")+". The following concern was given: "+response+'\n')
+		console.log("Finding discrepencies between: "+sol.files.join(", ")+". The following concern was given: "+response+'\n')
 		sol.checkDiscrepencies(concern=response)
 		rl.close()
 	})
