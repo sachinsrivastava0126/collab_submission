@@ -49,6 +49,8 @@ If an email has already been seen in a previously read file, this approach offer
 Also O(1) addition to the hash map if the email has not been seen before.
 
 ## Future Work
+- #1 priority: Automated and varied testing. I have not used JS in a while and did not want to do this and do it poorly.
 - Support storage of user and discrepency info in class instance (ran into scoping issues) to allow for programmatic access for other useful tasks.
 - Web-based UI to allow for file upload or text-pasting
+- Generalize to other input file formats? 
 
